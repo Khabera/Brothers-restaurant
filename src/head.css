@@ -1,0 +1,54 @@
+.header{
+    font-size: 64px;
+    font-family: 'Bulijrya';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#nav-bar{
+    margin-top: 24px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+.nav-button{
+    font-size: 20px;
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: 1px solid #333;
+    font-family: 'Weezer';
+    position: relative;
+    z-index: 1;
+    transition: 1s;
+}
+.nav-button::before, .nav-button::after{
+  position: absolute;
+  background: #f4f5f0;
+  z-index: -1;
+  transition: 1s;
+  content: '';
+}
+.nav-button::before {
+    height: 110%;
+    width: 80%;
+  }
+  .nav-button::after {
+    width: 110%;
+    height: 70%;
+  }
+  .nav-button:hover::before {
+    width: 0px;
+  }
+  
+  .nav-button:hover::after {
+    height: 0px;
+
+  }
+  
+  /*.nav-button:hover {
+  }*/

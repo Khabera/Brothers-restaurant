@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Bulijrya';  
+    src: './fonts/buljirya-font/BuljiryaPersonalUse-Yz06j.ttf'
+  }
+@font-face {
+    font-family: 'Weezer';
+    src: './fonts/WeezerFont/weezerfont.ttf';
+}
+body{
+    background-color: #f4f5f0;
+}
