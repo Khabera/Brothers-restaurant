@@ -11,6 +11,7 @@
     display: flex;
     align-items: center;
     gap: 32px;
+    margin-bottom: 24px;
 }
 .nav-button{
     font-size: 20px;

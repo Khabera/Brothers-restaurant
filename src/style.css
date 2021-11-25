@@ -6,6 +6,10 @@
     font-family: 'Weezer';
     src: './fonts/WeezerFont/weezerfont.ttf';
 }
+@font-face {
+    font-family: 'Vogue';
+    src: url('./fonts/vogue/Vogue.ttf');
+}
 body{
     background-color: #f4f5f0;
 }
