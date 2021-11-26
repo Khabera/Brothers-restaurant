@@ -1,0 +1,77 @@
+#switch-buttons{
+    display: flex;
+    gap: 24px;
+    padding-top: 24px;
+    margin-bottom: 12px;
+    position: sticky;
+    background-color: #f4f4ef;
+    justify-content: center;
+    width: 100%;
+    top: 160px;
+}
+.switch-button{
+    background-color: #f4f4ef;
+    font-size: 24px;
+    border: none;
+    box-sizing: border-box;
+    border-bottom: solid;
+    border-bottom-width: 1px;
+    cursor: pointer;
+}
+
+#menu-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-title{
+    font-size: 36px;
+    align-self: baseline;
+}
+#menu-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 800px;
+    transition: opacity .4s;
+}
+.item{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.item-title{
+    text-align: center;
+    font-size: 24px;
+}
+.item-description{
+    text-align: center;
+}
+.wine{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+.wine-title{
+    font-size: 24px;
+}
+.prices{
+    display: flex;
+    gap: 16px;
+}
+.beer{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+.name-country{
+    display: flex;
+    gap: 8px;
+    align-items:flex-end;
+}
+.beer-country{
+    font-size: 12px;
+    font-style: italic;
+}

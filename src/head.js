@@ -32,7 +32,13 @@ button4.appendChild(testContent);
 testContent.textContent = `Discover`
 navBar.appendChild(button4);
 header.appendChild(navBar);
+let buttons = {
+    homebutton: button1,
+    menubutton: button2,
+    cateringbutton: button3,
+    discoverbutton: button4
+}
 
 
 
-export default header;
+export {header, buttons};

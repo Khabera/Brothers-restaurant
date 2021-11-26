@@ -1,0 +1,10 @@
+#footer{
+    background-color: #5c4506;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:'Courier New', Courier, monospace;
+    color: white;
+}
