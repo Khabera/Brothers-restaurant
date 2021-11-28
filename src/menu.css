@@ -1,13 +1,16 @@
+
 #switch-buttons{
     display: flex;
     gap: 24px;
-    padding-top: 24px;
+    margin-top: 0;
     margin-bottom: 12px;
+    padding: 16px;
+    padding-bottom: 24px;
     position: sticky;
-    background-color: #f4f4ef;
+    background: linear-gradient(to bottom, #f4f5f0 0%, #f4f5f0 75%, rgba(244,245,240,0.85) 70%, rgba(244,245,240,0.82) 71%, rgba(244,245,240,0) 100%);
     justify-content: center;
     width: 100%;
-    top: 160px;
+    top: 143px;
 }
 .switch-button{
     background-color: #f4f4ef;

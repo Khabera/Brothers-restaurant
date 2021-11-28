@@ -13,13 +13,21 @@ contentDiv.appendChild(menu);
 document.body.appendChild(footer);
 
 buttons.homebutton.addEventListener('click', () => {
-    console.log('homebutotn lcikc')
-    contentDiv.firstChild.remove();
-    contentDiv.appendChild(home);
+    contentDiv.style.opacity=0;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setTimeout(() => {
+        contentDiv.firstChild.remove();
+        contentDiv.appendChild(home);
+        contentDiv.style.opacity=1;
+    }, 400)
 })
 buttons.menubutton.addEventListener('click', () => {
-    console.log('menubutotn lcikc')
-    contentDiv.firstChild.remove();
-    contentDiv.appendChild(menu);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    contentDiv.style.opacity=0;
+    setTimeout(() => {
+        contentDiv.firstChild.remove();
+        contentDiv.appendChild(menu);
+        contentDiv.style.opacity=1;
+    }, 400)
 })
 //buttons.menubutton.onclick = removeAndAppend(menu);

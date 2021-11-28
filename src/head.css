@@ -7,7 +7,8 @@
     width: 100%;
     position: sticky;
     top: 0;
-    background: linear-gradient(to bottom, #f4f5f0 0%, #f4f5f0 75%, rgba(244,245,240,0.85) 70%, rgba(244,245,240,0.82) 71%, rgba(244,245,240,0) 100%);
+    background-color: #f4f4ef;
+    /*background: linear-gradient(to bottom, #f4f5f0 0%, #f4f5f0 75%, rgba(244,245,240,0.85) 70%, rgba(244,245,240,0.82) 71%, rgba(244,245,240,0) 100%);*/
 }
 #nav-bar{
     margin-top: 24px;
@@ -15,7 +16,6 @@
     display: flex;
     align-items: center;
     gap: 32px;
-    margin-bottom: 24px;
 }
 .nav-button{
     font-size: 20px;
