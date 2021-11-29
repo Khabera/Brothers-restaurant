@@ -16,4 +16,6 @@ body{
 }
 #content-holder{
     transition: opacity 400ms;
+    display: flex;
+    justify-content: center;
 }
