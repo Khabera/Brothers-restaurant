@@ -10,7 +10,7 @@ document.body.appendChild(header);
 let contentDiv = document.createElement('div');
 contentDiv.setAttribute('id', 'content-holder');
 document.body.appendChild(contentDiv);
-contentDiv.appendChild(catering);
+contentDiv.appendChild(home);
 document.body.appendChild(footer);
 
 let buttonsArray = [buttons.menubutton, buttons.cateringbutton, buttons.discoverbutton, buttons.homebutton];
