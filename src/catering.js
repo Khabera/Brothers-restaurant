@@ -3,136 +3,114 @@ import './catering.css'
 const content = document.createElement('div');
 content.setAttribute('id', 'catering-content');
 
-let header0 = document.createElement('h1')
-header0.classList.add('catering-header');
-header0.textContent = "Meet";
-content.appendChild(header0);
+// let header0 = document.createElement('h1')
+// header0.classList.add('catering-header');
+// header0.textContent = "Meet";
+// content.appendChild(header0);
 
 let header = document.createElement('h1')
 header.classList.add('catering-header');
-header.textContent = "Catering Like No Other"
+header.textContent = "Meet Catering Like No Other"
 content.appendChild(header);
 
-let loopingObjects = new Array();
+const loopingObjectsArray = new Array();
 
-let intro = document.createElement('div');
-intro.classList.add('text');
-intro.textContent = "Order our delicious food for your next:"
-content.appendChild(intro);
-let cateringEvents = ['Party', 'Barbeque', 'Wedding', 'Birthday', 'Baby Shower'];
-let cateringBackground = document.createElement('div');
-content.appendChild(cateringBackground);
-cateringBackground.classList.add('loop-background')
-let eventsLoop = document.createElement('div');
-cateringBackground.appendChild(eventsLoop);
-eventsLoop.classList.add('looping-text');
-let text2 = document.createElement('div');
-text2.classList.add('lower-text');
-text2.textContent=`(or bring your party to us)`;
-content.appendChild(text2);
-loopingObjects.push({
-    htmlLocation: eventsLoop,
-    contentArray: cateringEvents,
-});
-
-
-let horsdoeurves = ['Antipasto Platters', 'Bacon Wrapped Shrimp', 'Meat or Fish Cakes', 'Artichoke Dip', 'Lobster Cocktail']
-let appetizers = document.createElement('div');
-content.appendChild(appetizers);
-appetizers.classList.add('text');
-appetizers.textContent = `with Appetizers such as:`
-let appetizersBackground = document.createElement('div');
-content.appendChild(appetizersBackground);
-appetizersBackground.classList.add('loop-background')
-let appetizersLoop = document.createElement('div');
-appetizersBackground.appendChild(appetizersLoop);
-appetizersLoop.classList.add('looping-text');
-let text3 = document.createElement('div');
-text3.classList.add('lower-text');
-text3.textContent=`(or nearly 50 other options)`;
-content.appendChild(text3);
-loopingObjects.push({
-    htmlLocation: appetizersLoop,
-    contentArray: horsdoeurves,
-});
-
-
-let soups = ['Chipotle Chicken and Rice Soup', 'Gazpacho', 'New England Clam Chowder', 'Chicken, Lemon, and Orzo', 'French Onion with Cheese']
-let soupsTitle = document.createElement('div');
-content.appendChild(soupsTitle);
-soupsTitle.classList.add('text');
-soupsTitle.textContent = `Soups such as:`
-let soupsBackground = document.createElement('div');
-content.appendChild(soupsBackground);
-soupsBackground.classList.add('loop-background')
-let soupsLoop = document.createElement('div');
-soupsBackground.appendChild(soupsLoop);
-soupsLoop.classList.add('looping-text');
-let soupsDesc = document.createElement('div');
-soupsDesc.classList.add('lower-text');
-soupsDesc.textContent=`(or nearly 15 other options)`;
-content.appendChild(soupsDesc);
-loopingObjects.push({
-    htmlLocation: soupsLoop,
-    contentArray: soups,
-});
-
-
-
-let salads = ['Bacon, Pear, and Blue Cheese', 'Authentic Greek', 'Classic Ceasar', 'Fresh Fig, Pear & Mixed Greens', 'Lemon Shrimp']
-let saladsTitle = document.createElement('div');
-content.appendChild(saladsTitle);
-saladsTitle.classList.add('text');
-saladsTitle.textContent = `Salads such as:`;
-let saladsBackground = document.createElement('div');
-content.appendChild(saladsBackground);
-saladsBackground.classList.add('loop-background')
-let saladsLoop = document.createElement('div');
-saladsBackground.appendChild(saladsLoop);
-saladsLoop.classList.add('looping-text');
-let saladsDesc = document.createElement('div');
-saladsDesc.classList.add('lower-text');
-saladsDesc.textContent=`(or nearly 20 other options)`;
-content.appendChild(saladsDesc);
-loopingObjects.push({
-    htmlLocation: saladsLoop,
-    contentArray: salads,
-});
-
-
-changeContentA(0);
-function changeContentA(num){
-    console.log(num);
-    if(num>=5){
-        num=0;
-    }
-    loopingObjects.forEach((object) => {
-        object.htmlLocation.style.opacity=0;
-        setTimeout(()=>{
-            object.htmlLocation.textContent=object.contentArray[num];
-            object.htmlLocation.style.opacity=1;
-        }, 800);
-    });
-    setTimeout(()=>{  
-        changeContentA(++num);
-    },4000);
+function createLoopingNode(title, disc, array){
+    let htmlNode = document.createElement('div');
+    let titleElement = document.createElement('div');
+    let loopingElement = document.createElement('div');
+    let descriptionElement = document.createElement('div');
+    htmlNode.classList.add('loop-group')
+    titleElement.classList.add('text');
+    loopingElement.classList.add('looping-text');
+    descriptionElement.classList.add('lower-text');
+    titleElement.textContent = title;
+    loopingElement.textContent = ''; //controlled externally via loopContent function
+    descriptionElement.textContent = disc;
+    htmlNode.appendChild(titleElement);
+    htmlNode.appendChild(loopingElement);
+    htmlNode.appendChild(descriptionElement);
+    content.appendChild(htmlNode);
+    let loopCountProperty = 0;
+    loopingObjectsArray.push({loopingElement, array, loopCountProperty});
+    return htmlNode;
 }
-function changeContentB(num){
-    console.log(num);
-    if(num>=5){
-        num=0;
+
+let eventsArray = ['Party', 'Barbeque', 'Wedding', 'Birthday', 'Baby Shower'];
+let eventsLoopingObject = createLoopingNode('events', '(or come to us)', eventsArray);
+
+
+let appetizerArray = ['Antipasto Platters', 'Bacon Wrapped Shrimp', 'Meat or Fish Cakes', 'Artichoke Dip', 'Lobster Cocktail']
+let appetizerLoopingObject = createLoopingNode('appetizers', '(or nearly 30 more)', appetizerArray);
+
+let soupArray = ['Chipotle Chicken and Rice Soup', 'Gazpacho', 'New England Clam Chowder', 'Chicken, Lemon, and Orzo', 'French Onion with Cheese'];
+let soupLoopingObject = createLoopingNode('soups', '(or nearly 20 more)', soupArray);
+
+let saladArray = ['Bacon, Pear, and Blue Cheese', 'Authentic Greek', 'Classic Ceasar', 'Fresh Fig, Pear & Mixed Greens', 'Lemon Shrimp']
+let saladLoopObject = createLoopingNode('salads', '(or nearly 15 more)', saladArray);
+
+let sandwichArray = ['Roast Turkey and Avocado', 'Panzanella Panini', 'Filet Mignon Sliders', 'Grilled Ahi on Ciabatta', 'Crustless Genoa Salami'];
+let sandwichLoopObject = createLoopingNode('sandwichs', '(or countless more)', sandwichArray);
+
+let menuAnchor = document.createElement('div')
+menuAnchor.classList.add('full-menu');
+content.appendChild(menuAnchor);
+let menuButton = document.createElement('a')
+menuButton.href = `https://www.brothersbistro.net/catering.pdf`
+menuButton.classList.add('menu-button');
+menuButton.textContent = "Click to Full Menu"
+menuAnchor.appendChild(menuButton);
+
+
+let header3 = document.createElement('div')
+header3.classList.add('catering-description');
+header3.textContent = "Our catering is built to give you a wide variety of foods to be inclusive to the pallete and diet of your entire party. View our full menu above and call the number below to set up catering that will impress your friends and family while maintaining your budget."
+content.appendChild(header3);
+
+let callText = document.createElement('div')
+callText.classList.add('catering-description');
+callText.textContent = "Call 760.728.4555 or visit our location"
+content.appendChild(callText);
+
+loopContent();
+function loopContent(){
+    loopA();
+    function loopA(){
+        checkCount();
+        contentChange();
+        setTimeout(()=>{  
+            loopB();
+        },4000);
     }
-    loopingObjects.forEach((object) => {
-        object.htmlLocation.style.opacity=0;
+    function loopB(){
+        checkCount();
+        contentChange();
+        setTimeout(()=>{  
+            loopA();
+        },4000);
+    }
+    function checkCount(){
+        loopingObjectsArray.forEach((object)=>{
+            if(object.loopCountProperty>=(object.array.length-1)){
+                object.loopCountProperty=0;
+            }else{
+                object.loopCountProperty++;
+            }
+        });
+    }
+    function contentChange(){
+        loopingObjectsArray.forEach((object) => {
+            object.loopingElement.style.opacity=0;
+        });
         setTimeout(()=>{
-            object.htmlLocation.textContent=object.contentArray[num];
-            object.htmlLocation.style.opacity=1;
+            loopingObjectsArray.forEach((object) => {
+                object.loopingElement.textContent=object.array[object.loopCountProperty];
+                object.loopingElement.style.opacity=1;
+            })
         }, 800);
-    });
-    setTimeout(()=>{  
-        changeContentA(++num);
-    },4000);
+    }
 }
+
 
 
 export default content;
