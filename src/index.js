@@ -42,6 +42,7 @@ window.addEventListener('scroll', () => {
     header.style.height = '77';
     header.childNodes[0].style.fontSize = '72px';
     header.childNodes[0].style.marginBottom = '-36px';
+    header.childNodes[1].style.marginTop = '24px';
     header.childNodes[1].style.marginBottom = '-12px';
     header.style.justifyContent = 'space-around';
     console.log('scrolling');
