@@ -15,6 +15,14 @@ document.body.appendChild(footer);
 
 let buttonsArray = [buttons.menubutton, buttons.cateringbutton, buttons.discoverbutton, buttons.homebutton];
 let respectivePage = [menu, catering, discover, home];
+// Commented Due to Unknown Load
+// window.addEventListener('resize', () => {
+//     if(window.innerWidth<1000){
+//         header.childNodes[0].textContent = '';
+//     }else{
+//         header.childNodes[0].textContent = `Brother's Bistro`;
+//     };
+// });
 buttonsArray.forEach((button, index) => {
     button.addEventListener('click', () => {
         contentDiv.style.opacity=0;
