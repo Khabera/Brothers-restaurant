@@ -28,7 +28,12 @@ let sDHours = addElement('li', '5:00PM - 8:00PM', '', 'hours', hoursText);
 let sDDays2 = addElement('li', 'Friday & Saturday', '', 'days', hoursText);
 let sDHours2 = addElement('li', '5:00PM - 9:00PM', '', 'hours', hoursText);
 
-let locationContainer = addElement('div', '', 'location-container', 0, homeDiv);
+let findUs = addElement('h1', 'Find Us At', 'find-us', '', homeDiv);
+let address1 = addElement('div', '123 Fake Address Lane', 0, 'address', homeDiv);
+let address2 = addElement('div', 'San Diego, California', 0, 'address', homeDiv);
+
+
+let locationContainer = addElement('div', 'Google Maps Redirect', 'location-container', 0, homeDiv);
 
 
 

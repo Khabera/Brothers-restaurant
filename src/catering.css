@@ -5,15 +5,19 @@
     width: 800px;
     gap: 8px;
     margin-bottom: 230px;
+    color: #E9DCCC;
 }
 .catering-header{
     font-size: 72px;
+    font-family: 'Bulijrya';
+    letter-spacing: -4px;
     text-align: center;
     padding-bottom: 48px;
-    border-bottom: black solid 2px;
+    border-bottom: #E9DCCC solid 2px;
 }
 .text{
     align-self: baseline;
+    font-family: 'Vogue';
     font-size: 24px;
     text-align: center;
 }
@@ -25,6 +29,7 @@
     width: 600px;
     font-size: 36px;
     transition: opacity 800ms;
+
 }
 .lower-text{
     margin-bottom: 36px;
@@ -36,7 +41,7 @@
 .full-menu{
     padding-top: 32px;
     width: 100%;
-    border-top: black solid 2px;
+    border-top: #E9DCCC solid 2px;
     text-align: center;
     font-size: 48px;
     display: flex;
@@ -48,15 +53,15 @@
     text-align: center;
 }
 .menu-button{
-    color: black;
+    color: #E9DCCC;
     text-decoration: none;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;;
     font-size: 36px;
-    background-color: #f4f5f0;
-    border: 1px solid black;
+    background-color: #0D6465;
+    border: 1px solid #ece2d6;
     padding: 16px;
     position: relative;
     z-index: 0;
@@ -64,7 +69,7 @@
 }
 .menu-button::before, .menu-button::after{
     position: absolute;
-    background: #f4f5f0;
+    background: #0D6465;
     z-index: -1;
     transition: 1s;
     content: '';

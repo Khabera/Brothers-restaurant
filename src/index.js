@@ -26,9 +26,9 @@ let respectivePage = [menu, catering, discover, home];
 buttonsArray.forEach((button, index) => {
     button.addEventListener('click', () => {
         contentDiv.style.opacity=0;
-        buttonsArray.forEach((button) => button.style.borderColor = 'white');
-        button.style.borderColor = 'white';
-        window.scrollTo({ top: 21, behavior: 'smooth' });
+        buttonsArray.forEach((button) => button.style.borderStyle = 'dotted');
+        button.style.borderStyle = 'solid';
+        window.scrollTo({ top: 22, behavior: 'smooth' });
         setTimeout(() => {
             contentDiv.firstChild.remove();
             contentDiv.appendChild(respectivePage[index]);
@@ -40,7 +40,9 @@ window.addEventListener('scroll', () => {
     if(window.scrollY>20){
     header.style.flexDirection = 'row';
     header.style.height = '77';
-    header.childNodes[0].style.fontSize = '64px';
+    header.childNodes[0].style.fontSize = '72px';
+    header.childNodes[0].style.marginBottom = '-36px';
+    header.childNodes[1].style.marginBottom = '-12px';
     header.style.justifyContent = 'space-around';
     console.log('scrolling');
     }

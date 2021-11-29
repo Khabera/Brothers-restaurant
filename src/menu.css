@@ -7,14 +7,15 @@
     padding: 16px;
     padding-bottom: 24px;
     position: sticky;
-    background: linear-gradient(to bottom, #f4f5f0 0%, #f4f5f0 75%, rgba(244,245,240,0.85) 70%, rgba(244,245,240,0.82) 71%, rgba(244,245,240,0) 100%);
+    background: linear-gradient(to bottom, #0D6465 0%, #0D6465 75%, rgba(244,245,240,0) 100%);
     justify-content: center;
     width: 100%;
-    top: 125px;
+    top: 102px;
 }
 .switch-button{
-    background-color: #f4f4ef;
+    background-color: #0D6465;
     font-size: 24px;
+    color: #E9DCCC;
     border: none;
     box-sizing: border-box;
     border-bottom: solid;
@@ -27,6 +28,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #E9DCCC;
+    padding-bottom: 64px;
 }
 .main-title{
     font-size: 36px;
@@ -49,6 +52,8 @@
 .item-title{
     text-align: center;
     font-size: 24px;
+    font-family: 'Bulijrya';
+    letter-spacing: -1px;
 }
 .item-description{
     text-align: center;
@@ -58,8 +63,15 @@
     width: 80%;
     justify-content: space-between;
 }
+.main-title{
+    font-size: 48px;
+    font-family: 'Bulijrya';
+    letter-spacing: -3px;
+}
 .wine-title{
     font-size: 24px;
+    font-family: 'Bulijrya';
+    letter-spacing: 4px;
 }
 .prices{
     display: flex;

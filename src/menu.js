@@ -4,8 +4,8 @@ import {lunch, dinner, alcohol} from './menuitems.js';
 const switchLunch = () => {
     window.scrollTo({ top: 21, behavior: 'smooth' });
     menuContainer.style.opacity = 0.3;
-    buttons.forEach((button) => button.style.color = 'dimgrey');
-    lunchButton.style.color = 'black';
+    buttons.forEach((button) => button.style.color = '#b9ad9f');
+    lunchButton.style.color = '#E9DCCC';
     setTimeout(()=>{
         resetMenucontainer();
         const appetizersTitle = makeTitle('Appetizers');
@@ -20,8 +20,8 @@ const switchLunch = () => {
 const switchDinner = () => {
     window.scrollTo({ top: 21, behavior: 'smooth' });
     menuContainer.style.opacity = 0.3;
-    buttons.forEach((button) => button.style.color = 'dimgrey');
-    dinnerButton.style.color = 'black';
+    buttons.forEach((button) => button.style.color = '#b9ad9f');
+    dinnerButton.style.color = '#E9DCCC';
     setTimeout(() => {
         (menuContainer.style.opacity = 1)
         resetMenucontainer();   
@@ -34,8 +34,8 @@ const switchDinner = () => {
 const switchWine = () => {
     window.scrollTo({ top: 21, behavior: 'smooth' });
     menuContainer.style.opacity = 0.3;
-    buttons.forEach((button) => button.style.color = 'dimgrey');
-    wineButton.style.color = 'black';
+    buttons.forEach((button) => button.style.color = '#b9ad9f');
+    wineButton.style.color = '#E9DCCC';
     setTimeout(()=> {
         resetMenucontainer();
         const redwineTitle = makeTitle('Red Wine');

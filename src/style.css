@@ -10,8 +10,12 @@
     font-family: 'Vogue';
     src: url('./fonts/vogue/Vogue.ttf');
 }
+@font-face{
+    font-family: 'Bughia';
+    src: url('./fonts/bughia/Bughia\ Demo.ttf');
+}
 body{
-    background-color: #f4f5f0;
+    background-color: #0D6465;
     margin: 0;
 }
 #content-holder{
