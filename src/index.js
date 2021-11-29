@@ -13,40 +13,31 @@ document.body.appendChild(contentDiv);
 contentDiv.appendChild(catering);
 document.body.appendChild(footer);
 
-buttons.homebutton.addEventListener('click', () => {
-    contentDiv.style.opacity=0;
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    setTimeout(() => {
-        contentDiv.firstChild.remove();
-        contentDiv.appendChild(home);
-        contentDiv.style.opacity=1;
-    }, 400)
+let buttonsArray = [buttons.menubutton, buttons.cateringbutton, buttons.discoverbutton, buttons.homebutton];
+let respectivePage = [menu, catering, discover, home];
+buttonsArray.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        contentDiv.style.opacity=0;
+        buttonsArray.forEach((button) => button.style.borderColor = 'white');
+        button.style.borderColor = 'white';
+        window.scrollTo({ top: 21, behavior: 'smooth' });
+        setTimeout(() => {
+            contentDiv.firstChild.remove();
+            contentDiv.appendChild(respectivePage[index]);
+            contentDiv.style.opacity=1;
+        }, 400)
+    })
 })
-buttons.menubutton.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    contentDiv.style.opacity=0;
-    setTimeout(() => {
-        contentDiv.firstChild.remove();
-        contentDiv.appendChild(menu);
-        contentDiv.style.opacity=1;
-    }, 400)
-})
-buttons.cateringbutton.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    contentDiv.style.opacity=0;
-    setTimeout(() => {
-        contentDiv.firstChild.remove();
-        contentDiv.appendChild(catering);
-        contentDiv.style.opacity=1;
-    }, 400)
-})
-//buttons.menubutton.onclick = removeAndAppend(menu);
-buttons.discoverbutton.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    contentDiv.style.opacity=0;
-    setTimeout(() => {
-        contentDiv.firstChild.remove();
-        contentDiv.appendChild(discover);
-        contentDiv.style.opacity=1;
-    }, 400)
+window.addEventListener('scroll', () => {
+    if(window.scrollY>20){
+    header.style.flexDirection = 'row';
+    header.style.height = '77';
+    header.childNodes[0].style.fontSize = '64px';
+    header.style.justifyContent = 'space-around';
+    console.log('scrolling');
+    }
+    else{
+        header.style.flexDirection = 'column';
+        header.style.height = '143';
+    }
 })

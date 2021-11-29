@@ -10,7 +10,7 @@
     background: linear-gradient(to bottom, #f4f5f0 0%, #f4f5f0 75%, rgba(244,245,240,0.85) 70%, rgba(244,245,240,0.82) 71%, rgba(244,245,240,0) 100%);
     justify-content: center;
     width: 100%;
-    top: 143px;
+    top: 125px;
 }
 .switch-button{
     background-color: #f4f4ef;
@@ -20,6 +20,7 @@
     border-bottom: solid;
     border-bottom-width: 1px;
     cursor: pointer;
+    transition: color 400ms;
 }
 
 #menu-content{

@@ -2,8 +2,10 @@ import './menu.css'
 import {lunch, dinner, alcohol} from './menuitems.js';
 
 const switchLunch = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 21, behavior: 'smooth' });
     menuContainer.style.opacity = 0.3;
+    buttons.forEach((button) => button.style.color = 'dimgrey');
+    lunchButton.style.color = 'black';
     setTimeout(()=>{
         resetMenucontainer();
         const appetizersTitle = makeTitle('Appetizers');
@@ -16,8 +18,10 @@ const switchLunch = () => {
     }, 400);
 }
 const switchDinner = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 21, behavior: 'smooth' });
     menuContainer.style.opacity = 0.3;
+    buttons.forEach((button) => button.style.color = 'dimgrey');
+    dinnerButton.style.color = 'black';
     setTimeout(() => {
         (menuContainer.style.opacity = 1)
         resetMenucontainer();   
@@ -28,8 +32,10 @@ const switchDinner = () => {
         }, 400)
 }
 const switchWine = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 21, behavior: 'smooth' });
     menuContainer.style.opacity = 0.3;
+    buttons.forEach((button) => button.style.color = 'dimgrey');
+    wineButton.style.color = 'black';
     setTimeout(()=> {
         resetMenucontainer();
         const redwineTitle = makeTitle('Red Wine');
@@ -78,17 +84,13 @@ wineButton.classList.add('switch-button');
 wineButton.innerHTML = `Wine`;
 wineButton.addEventListener('click', switchWine);
 content.appendChild(switchBar);
+const buttons = [lunchButton, dinnerButton, wineButton];
 
 const menuContainer = content.appendChild(document.createElement('div'));
 menuContainer.setAttribute('id', 'menu-items')
 
 //start page with Lunch
-const appetizersTitle = makeTitle('Appetizers');
-lunch.appetizers.forEach((item) => addItem(item));
-const soupsSaladsTitle = makeTitle('Soups and Salads');
-lunch.soupssalads.forEach((item) => addItem(item));
-const sandwichesTitle = makeTitle('Artisan Sandwiches');
-lunch.artisansandwiches.forEach((item => addItem(item)));
+switchLunch();
 
 function makeTitle(name){
     let holder = menuContainer.appendChild(document.createElement('div'));

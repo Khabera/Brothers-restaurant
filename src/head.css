@@ -1,5 +1,5 @@
 .header{
-    font-size: 64px;
+    font-size: 128px;
     font-family: 'Bulijrya';
     display: flex;
     flex-direction: column;
@@ -8,7 +8,11 @@
     position: sticky;
     top: 0;
     background-color: #f4f4ef;
-    /*background: linear-gradient(to bottom, #f4f5f0 0%, #f4f5f0 75%, rgba(244,245,240,0.85) 70%, rgba(244,245,240,0.82) 71%, rgba(244,245,240,0) 100%);*/
+    color: white;
+    background: linear-gradient(to top, #f4f5f0, black, black, black, black, black );
+    padding-bottom: 48px;
+    transition: height 1s ease-out;
+    height: max-content;
 }
 #nav-bar{
     margin-top: 24px;
@@ -25,7 +29,8 @@
     align-items: center;
     justify-content: center;
     background: none;
-    border: 1px solid #333;
+    color: white;
+    border: 1px solid white;
     font-family: 'Weezer';
     position: relative;
     z-index: 1;
@@ -33,7 +38,7 @@
 }
 .nav-button::before, .nav-button::after{
   position: absolute;
-  background: #f4f5f0;
+  background: black;
   z-index: -1;
   transition: 1s;
   content: '';
